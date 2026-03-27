@@ -1,0 +1,71 @@
+{
+  "name": "@thefiredev/vectorclose",
+  "version": "0.1.0",
+  "description": "Autonomous B2B sales closer. Your sales team that never sleeps.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write 'src/**/*.ts'",
+    "db:migrate": "prisma migrate dev",
+    "db:generate": "prisma generate",
+    "db:studio": "prisma studio",
+    "campaign:create": "tsx scripts/campaign-create.ts",
+    "campaign:start": "tsx scripts/campaign-start.ts",
+    "dashboard": "tsx src/dashboard/server.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "sales-automation",
+    "b2b",
+    "outreach",
+    "ai-agents",
+    "autonomous"
+  ],
+  "author": "The Fire Dev LLC <team@thefiredev.com>",
+  "license": "MIT",
+  "homepage": "https://thefiredev.com/vectorclose",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thefiredev/vectorclose.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thefiredev/vectorclose/issues"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.20.0",
+    "@prisma/client": "^5.0.0",
+    "bullmq": "^5.0.0",
+    "express": "^4.18.0",
+    "ioredis": "^5.3.0",
+    "openai": "^4.0.0",
+    "resend": "^2.0.0",
+    "zod": "^3.22.0",
+    "axios": "^1.6.0",
+    "winston": "^3.11.0",
+    "dotenv": "^16.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "prettier": "^3.0.0",
+    "prisma": "^5.0.0",
+    "ts-jest": "^29.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.3.0"
+  }
+}
