@@ -59,3 +59,9 @@ prisma/*.db-journal
 *.pfx
 secrets/
 credentials/
+
+# Build output
+.next/
+/.next/
+/out/
+*.tsbuildinfo
